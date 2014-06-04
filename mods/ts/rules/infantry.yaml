@@ -114,7 +114,7 @@ MEDIC:
 		Cost: 600
 	Tooltip:
 		Name: Medic
-		Description: Heals nearby infantry.\n  Strong vs Nothing\n  Weak vs Everything
+		Description: Heals nearby infantry.\n  Unarmed
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 60
@@ -145,7 +145,7 @@ ENGINEER:
 		Cost: 500
 	Tooltip:
 		Name: Engineer
-		Description: Infiltrates and captures enemy structures.\n  Strong vs Nothing\n  Weak vs Everything
+		Description: Infiltrates and captures enemy structures.\n  Unarmed
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 30
@@ -176,7 +176,7 @@ UMAGON:
 		Cost: 400
 	Tooltip:
 		Name: Umagon
-		Description: Elite sniper infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
+		Description: Elite mutant commando armed with a\n sniper rifle and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles \nSpecial Ability: Destroy Building with C4
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 50
@@ -189,6 +189,8 @@ UMAGON:
 	Health:
 		HP: 150
 	Passenger:
+	C4Demolition:
+		C4Delay: 45
 	RevealsShroud:
 		Range: 7c0
 	Armament:
@@ -205,7 +207,7 @@ GHOST:
 		Cost: 1750
 	Tooltip:
 		Name: Ghost Stalker
-		Description: Elite commando infantry, armed with \ndual pistols and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles\n  Special Ability: Destroy Building with C4\n\nMaximum 1 can be trained
+		Description: Elite mutant commando, armed with \na railgun\n  Strong vs Infantry, Vehicles\n  Weak vs Air Units\n \n\nMaximum 1 can be trained
 		BuildLimit: 1
 	Buildable:
 		Queue: Infantry
@@ -227,8 +229,6 @@ GHOST:
 	CrushableInfantry:
 		CrushSound: squish2.aud
 	AttackFrontal:
-	C4Demolition:
-		C4Delay: 45
 	TakeCover:
 	-RenderInfantry:
 	RenderInfantryProne:
@@ -273,9 +273,9 @@ CHAMSPY:
 		Hotkey: p
 	Valued:
 		Cost: 700
-	DisguiseToolTip:
+	Tooltip:
 		Name: Chameleon Spy
-		Description: Infiltrates enemy structures to gather \nintelligence. Exact effect depends on the \nbuilding infiltrated.\n  Strong vs Nothing\n  Weak vs Everything\n  Special Ability: Disguised
+		Description: Infiltrates enemy structures to gather \nintelligence. Exact effect depends on the \nbuilding infiltrated.\n  Strong vs Nothing\n  Weak vs Everything\n  Special Ability: Cloaked
 	Selectable:
 		Voice: Spy
 		Bounds: 12,17,0,-9
@@ -287,13 +287,15 @@ CHAMSPY:
 		Range: 9c0
 	Passenger:
 	TakeCover:
-	Disguise:
+	Cloak:
+		InitialDelay: 90
+		CloakDelay: 90
+		CloakSound: cloak5.aud
+		UncloakSound: cloak5.aud
 	Infiltrates:
 		Types: Cash, SupportPower, Exploration
 	-AutoTarget:
-	-RenderInfantry:
-	RenderDisguise:
-		IdleAnimations: idle1,idle2
+	RenderInfantry:
 
 CYBORG:
 	Inherits: ^Infantry
@@ -307,7 +309,7 @@ CYBORG:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 50
-		Owner: nod
+		Owner: nod, cabal
 	-CrushableInfantry:
 		CrushSound: squish2.aud
 	Selectable:
@@ -336,11 +338,11 @@ CYC2:
 		Cost: 2000
 	Tooltip:
 		Name: Cyborg Commando
-		Description: Elite cybernetic infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
+		Description: Elite cybernetic infantry.\n  Strong vs Infantry, Buildings, Vehicles\n  Weak vs Air Units
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 50
-		Owner: nod
+		Owner: nod, cabal
 	-CrushableInfantry:
 		CrushSound: squish2.aud
 	Selectable:
@@ -546,93 +548,6 @@ SLAV:
 	-RenderInfantry:
 	RenderInfantryProne:
 		IdleAnimations: idle1,idle2
-
-DOGGIE:
-	Inherits: ^Infantry
-	Tooltip:
-		Name: Tiberian Fiend
-	Buildable:
-		Queue: Infantry
-		BuildPaletteOrder: 100
-		Owner: None
-	Health:
-		Radius: 128
-		HP: 250
-	Valued:
-		Cost: 100
-	Armor:
-		Type: Light
-	RevealsShroud:
-		Range: 4c0
-	Mobile:
-		Speed: 113
-	Selectable:
-		Voice: Fiend
-	TargetableUnit:
-		TargetTypes: Ground
-	Armament:
-		Weapon: FiendShard
-	AttackFrontal:
-	AttackWander:
-
-VISSML:
-	Inherits: ^Infantry
-	Tooltip:
-		Name: Baby Visceroid
-	Buildable:
-		Queue: Infantry
-		BuildPaletteOrder: 100
-		Owner: None
-	Health:
-		HP: 200
-	Valued:
-		Cost: 1
-	Armor:
-		Type: Light
-	RevealsShroud:
-		Range: 0c0
-	Mobile:
-		Speed: 113
-		ROT: 16
-	-CrushableInfantry:
-	Selectable:
-		Voice: Fiend
-	TargetableUnit:
-		TargetTypes: Ground
-	-AutoTarget:
-	-RenderInfantry:
-	RenderUnit:
-
-VISLRG:
-	Inherits: ^Infantry
-	Tooltip:
-		Name: Adult Visceroid
-	Buildable:
-		Queue: Infantry
-		BuildPaletteOrder: 100
-		Owner: None
-	Health:
-		HP: 500
-	Valued:
-		Cost: 1
-	Armor:
-		Type: Light
-	RevealsShroud:
-		Range: 0c0
-	Mobile:
-		Speed: 113
-		ROT: 16
-	-CrushableInfantry:
-	Selectable:
-		Voice: Fiend
-	TargetableUnit:
-		TargetTypes: Ground
-	Armament:
-		Weapon: SlimeAttack
-	AttackFrontal:
-	AttackWander:
-	-RenderInfantry:
-	RenderUnit:
 
 CIV1:
 	Inherits: ^CivilianInfantry

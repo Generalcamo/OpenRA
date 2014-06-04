@@ -1,0 +1,53 @@
+JUGGER:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 950
+	Tooltip:
+		Name: Juggernaut
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 100
+		Owner: gdi
+	Health:
+		HP: 350
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 71
+		ROT: 2
+	RevealsShroud:
+		Range: 9c0
+	RenderInfantry:
+		SpawnsCorpse: false
+	RenderVoxels:
+	WithVoxelBody:
+	Transforms:
+		IntoActor: DJUGG
+		Offset: -1,-1
+		Facing: 96
+		TransformSounds:
+		NoTransformSounds:
+	
+REAPER:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: Cyborg Reaper
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 100
+		Owner: nod
+	Health:
+		HP: 400
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 71
+		ROT: 2
+	RevealsShroud:
+		Range: 9c0
+	RenderInfantry:
+		SpawnsCorpse: false
+	RenderVoxels:
+	WithVoxelBody:

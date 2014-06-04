@@ -1,0 +1,86 @@
+DOGGIE:
+	Inherits: ^Infantry
+	Tooltip:
+		Name: Tiberian Fiend
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 100
+		Owner: fauna
+	Health:
+		Radius: 128
+		HP: 250
+	Valued:
+		Cost: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 4c0
+	Mobile:
+		Speed: 113
+	Selectable:
+		Voice: Fiend
+	TargetableUnit:
+		TargetTypes: Ground
+	Armament:
+		Weapon: FiendShard
+	AttackFrontal:
+	AttackWander:
+
+VISSML:
+	Inherits: ^Infantry
+	Tooltip:
+		Name: Baby Visceroid
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 100
+		Owner: fauna
+	Health:
+		HP: 200
+	Valued:
+		Cost: 1
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 0c0
+	Mobile:
+		Speed: 113
+		ROT: 16
+	-CrushableInfantry:
+	Selectable:
+		Voice: Fiend
+	TargetableUnit:
+		TargetTypes: Ground
+	-AutoTarget:
+	-RenderInfantry:
+	RenderUnit:
+
+VISLRG:
+	Inherits: ^Infantry
+	Tooltip:
+		Name: Adult Visceroid
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 100
+		Owner: fauna
+	Health:
+		HP: 500
+	Valued:
+		Cost: 1
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 0c0
+	Mobile:
+		Speed: 113
+		ROT: 16
+	-CrushableInfantry:
+	Selectable:
+		Voice: Fiend
+	TargetableUnit:
+		TargetTypes: Ground
+	Armament:
+		Weapon: SlimeAttack
+	AttackFrontal:
+	AttackWander:
+	-RenderInfantry:
+	RenderUnit:

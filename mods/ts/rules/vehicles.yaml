@@ -40,7 +40,7 @@ APC:
 		Cost: 600
 	Tooltip:
 		Name: Amphibious APC
-		Description: Armored infantry transport and mobile AA\n  Strong vs Aircraft, Vehicles\n  Weak vs Infantry
+		Description: Armored amphibious infantry transport\nUnarmed
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 30
@@ -101,7 +101,7 @@ HVR:
 		Cost: 900
 	Tooltip:
 		Name: Hover MLRS
-		Description: Hover Multi-Launch Rocket System
+		Description: Medium range hover vehicle armed with \nrockets.\nStrong vs Vehicles, Buildings \nWeak vs Infantry
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 50
@@ -132,11 +132,11 @@ HVR:
 		Cost: 1700
 	Tooltip:
 		Name: Mammoth Tank
-		Description: Heavily armored GDI Tank.\n  Strong vs Everything
+		Description: Forgotten Tank salvaged from the \n First Tiberium War\n  Strong vs Everything
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 60
-		Owner: gdi
+		Owner: forgotten
 	Mobile:
 		Speed: 56
 		ROT: 5
@@ -199,6 +199,7 @@ LPST:
 		Cost: 950
 	Tooltip:
 		Name: Mobile Sensor Array
+		Description: Can deploy to detect cloaked and \n subterranean units. \nUnarmed
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 100
@@ -261,7 +262,7 @@ REPAIR:
 		Cost: 1000
 	Tooltip:
 		Name: Mobile Repair Vehicle
-		Description: Repairs nearby vehicles.\n  Strong vs Nothing\n  Weak vs Everything
+		Description: Repairs nearby vehicles.\n  Unarmed
 	Health:
 		HP: 200
 	Mobile:
@@ -470,7 +471,8 @@ MMCH:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Medium Mech
+		Name: Titan
+		Description: Anti-Tank Walker \nStrong vs Vehicles \nWeak vs Infantry, Air Units
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 30
@@ -506,6 +508,8 @@ HMEC:
 		Cost: 3000
 	Tooltip:
 		Name: Mammoth Mk. II
+		Description: Advanced heavy walker unit armed with \nrailguns, SAM batteries, and a \nmachine gun. \nStrong vs Everything\nWeak vs Nothing \n\nMaximum 1 can be built
+		BuildLimit: 1
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 80
@@ -538,7 +542,7 @@ SMECH:
 		Cost: 500
 	Tooltip:
 		Name: Wolverine
-		Description: Small Mech
+		Description: Small walker armed with machine guns. \nStrong vs Infantry \nWeak vs Tanks, Air Units
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 10
@@ -597,7 +601,7 @@ BGGY:
 		Cost: 500
 	Tooltip:
 		Name: Attack Buggy
-		Description: Fast scout & anti-infantry vehicle.\n  Strong vs Infantry, Vehicles\n  Weak vs Tanks, Aircraft
+		Description: Fast scout & anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks, Aircraft
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 40
@@ -629,7 +633,7 @@ SAPC:
 		Cost: 800
 	Tooltip:
 		Name: Subterranean APC
-		Description: Armored infantry transport and mobile AA\n  Strong vs Aircraft, Vehicles\n  Weak vs Infantry
+		Description: Armored infantry transport\nUnarmed \n\n Special Ability: Travels Underground
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 30
@@ -657,7 +661,7 @@ SUBTANK:
 		Cost: 750
 	Tooltip:
 		Name: Devil's Tongue
-		Description: Subterranean Tank
+		Description: Subterranean Tank armed with two flamethrowers \nStrong vs Infantry, Buildings \nWeak vs Tanks, Air Units \n\nSpecial Ability: Travels Underground
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 40
@@ -685,6 +689,7 @@ SONIC:
 		Cost: 1300
 	Tooltip:
 		Name: Disruptor
+		Description: Vehicle armed with a sonic weapon.\n Strong vs Vehicles, Buildings \nWeak vs Infantry, Air Units
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 70
@@ -745,7 +750,7 @@ STNK:
 		Cost: 1100
 	Tooltip:
 		Name: Stealth Tank
-		Description: Long-range missile tank that can cloak.\nHas weak armor. Can be spotted by infantry.\n  Strong vs Vehicles, Tanks, Aircraft\n  Weak vs Infantry.
+		Description: Missile tank that can cloak.\nHas weak armor. Can be spotted by infantry\n and sensors.\n  Strong vs Vehicles, Tanks, Aircraft\n  Weak vs Infantry.
 	Buildable:
 		BuildPaletteOrder: 90
 		Queue: Vehicle

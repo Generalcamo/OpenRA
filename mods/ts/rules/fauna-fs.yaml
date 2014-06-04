@@ -1,0 +1,30 @@
+FLOATER:
+	Inherits: ^Infantry
+	Tooltip:
+		Name: Tiberium Floater
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 100
+		Owner: fauna
+	Health:
+		HP: 500
+	Valued:
+		Cost: 1
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 0c0
+	Mobile:
+		Speed: 142
+		ROT: 16
+	-CrushableInfantry:
+	Selectable:
+		Voice: Fiend
+	TargetableUnit:
+		TargetTypes: Ground
+	Armament:
+		Weapon: SlimeAttack
+	AttackFrontal:
+	AttackWander:
+	-RenderInfantry:
+	RenderUnit:

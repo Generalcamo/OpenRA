@@ -1,0 +1,26 @@
+ELCAD:
+	Inherits: ^Infantry
+	IMG: SLAV
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Owner: none
+		Hotkey: e
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Elite Cadre
+		Description: Heavy infantry.\n  Strong vs Infantry, Light Vehicles\n  Weak vs Tanks, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Health:
+		HP: 175
+	Mobile:
+		Speed: 71
+	Armament:
+		Weapon: vulcan3
+	AttackFrontal:
+	TakeCover:
+	-RenderInfantry:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
