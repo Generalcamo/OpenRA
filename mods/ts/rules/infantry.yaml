@@ -180,7 +180,7 @@ UMAGON:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 50
-		Owner: gdi
+		Owner: None
 	Selectable:
 		Bounds: 12,17,0,-6
 		Voice: Umagon
